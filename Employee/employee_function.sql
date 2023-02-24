@@ -84,10 +84,3 @@ end
 $$;
 ----------------------
 
-
---call CreateEmployee(2, 'A', 'AA', '05');
---call EditEmployee(2, 2, 'B', 'AA', '065');
---call DeleteEmployee(2);
---select *
---from 
---FindEmployee(null, 'A');

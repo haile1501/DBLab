@@ -173,8 +173,7 @@ begin
 end
 $$;
 
-DROP TRIGGER arrived_operation_update_trigger ON operation;
-CREATE TRIGGER arrived_operation_update_trigger AFTER UPDATE ON operation
+CREATE OR REPLACE TRIGGER arrived_operation_update_trigger AFTER UPDATE ON operation
 FOR EACH ROW
 EXECUTE FUNCTION arrived_operation_trigger();
 

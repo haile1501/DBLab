@@ -75,5 +75,5 @@ $$;
 create or replace trigger on_bill_updated
 after update on bill
 for each row
-execute procedure UpdateReservation()
+execute procedure UpdateReservation();
 ----------------------

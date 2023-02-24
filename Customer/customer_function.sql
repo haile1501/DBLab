@@ -97,11 +97,3 @@ end
 $$;
 
 ------------------------
-
---call CreateCustomerProfile('A', '05 09', 'a@', '10');
---call CreateCustomerProfile('A', '05a09', 'a@', '10');
---call EditCustomerProfile(1, 'B', '0509', 'a@', '10');
---call DeleteCustomerProfile(1);
-select * 
-from
-FilterCustomerProfile('A', null, null, null);

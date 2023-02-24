@@ -1,5 +1,6 @@
 --------Search by customer_name---------
 
+DROP INDEX IF EXISTS idx_company_name;
 CREATE INDEX idx_company_name ON customer (company_name);
 
 

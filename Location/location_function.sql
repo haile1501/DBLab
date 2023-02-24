@@ -22,7 +22,6 @@ end $$;
 
 /* Detail information about location */
 /* code: pattern like 'a%'*/
-DROP FUNCTION get_location_by_code(text);
 create or replace function get_location_by_code(code text)
 returns table (
 	product_id int,
@@ -49,7 +48,7 @@ end
 $$;
 
 /* Retrieve all location of a product */
-DROP FUNCTION get_all_locations_of_product(integer);
+
 create or replace function get_all_locations_of_product(id int)
 returns table(
 	location_code text,
@@ -106,6 +105,6 @@ begin
 end
 $$;
 
-CREATE TRIGGER delete_update_location_product AFTER UPDATE OR DELETE ON location_product
+CREATE OR REPLACE TRIGGER delete_update_location_product AFTER UPDATE OR DELETE ON location_product
 FOR EACH ROW
 EXECUTE FUNCTION delete_update_location_product_trigger();
